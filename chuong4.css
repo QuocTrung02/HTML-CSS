@@ -1,0 +1,54 @@
+:root {
+  --primary-color: red;
+  --secondary-color: blue;
+}
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+* {
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.background {
+  background-color: black;
+  color: white;
+  width: 100vw;
+}
+
+/* Bài 1: transform: Transform CSS được dịch là thuộc tính chuyển đổi. Nó cho phép bạn thay đổi vị trí, hình dáng và xoay các phần tử theo nhiều hướng khác nhau. Trên thực tế, có hai loại Transform CSS đó là 2D và 3D transformation. 
+ */
+ .transformimage {
+    width: 60%;
+ }
+.boxed {
+  background-color: red;
+  margin: 5rem;
+  width: 5rem;
+  height: 5rem;
+
+  /* to ra nhưng không đẩy chữ */
+  /* transform: scale(2, 2); */
+  /* Hoặc X:chiểu Ngang Y:Chiều dọc*/
+  /* transform: scaleX(2) scaleY(2); */
+
+  /* rotate: xoay theo độ */
+  /* rotateX: theo chiều ngang 
+     rotateY theo chiều dọc
+     rotateZ theo mặt phẳng */
+  /* transform: rotate(45deg); */
+
+  /* stranslate: cũng giống như margin nhưng cao cấp hơn*/
+  /* translate khoảng cách bằng kích thước bề ngang của vật */
+  /* transform: translate(100%); */
+
+  /* skew: tạo hình giống như hình bình hành  */
+  transform: skewX(30deg) skewY(30deg);
+
+
+}
