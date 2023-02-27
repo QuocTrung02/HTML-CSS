@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML và CSS</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- Link fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;  400;700&display=swap" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    </div><div>
+        <p>Thẻ div: bọc 1 khối nào
+            thẻ p: Hiển thị dưới dạ
+            thẻ h1-h6: Tiêu đề từ l
+            thẻ a(link): thẻ đường 
+            thẻ img: Hình ảnh
+            thẻ ol[li]:Tạo danh sác
+            thẻ ul[li];Tạo Mục Lục </p>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+    <a href="https://www.google.gg/?gws_rd=ssl" target="_blank" rel="noopener noreferrer">google</a> 
+    <img src="https://images.unsplash.com/photo-1675237292536-bc525ce22ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80" alt="images"> 
+    
+    <ol>
+        <li>ol Tạo Mục Lục</li>
+        <li>ol Tạo Mục Lục</li>
+        <li>ol Tạo Mục Lục</li>
+    </ol>
+    <ul>
+        <li>ul tạo danh sách</li>
+        <li>ul tạo danh sách</li>
+        <li>ul tạo danh sách</li>
+    </ul>
+
+    <header>header dùng ở phía trên</header>
+    <footer>footerdùng ở phía dưới</footer>
+    <aside></aside>
+    <article>article tượng trưng cho 1 bài viết</article>
+    <nav>Thẻ nav Tạo Menu</nav>
+    <main>Thẻ main: chứa nhiều thông tin chính của trang web</main>
+    <!-- thẻ nhúng (nhúng video hay gì đó cho trang web của mình) -->
+    <iframe width="1536" height="864" src="https://www.youtube.com/embed/g4GBGAo_riE?list=PLd8OdiciAE1SwMCtd6XgYp-ei1or6sb1r" title="[Chương 1] Bài 5: Các thẻ HTML cơ bản phần 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <span>thẻ span: đoạn văn bản ngắn</span>
+    <b>bold tô đậm</b>
+    <i>italic chữ nghiêng</i>
+
+    <!-- sự khác biệt giữa thẻ inline và thẻ block -->
+    <!-- thẻ inline -->
+    <span>inline</span>
+    <span>inline</span>
+    <span>inline</span>
+    <span>inline</span>
+    <!-- thẻ block -->
+    <p>block</p>
+    <p>block</p>
+    <p>block</p>
+    <p>block</p>
+
+    <!-- kết hợp inline và block -->
+    <p>nếu bạn muốn đọc tiếp vui lòng bấm <a href="https://google.com" target="_blank" rel="noopener noreferrer">tại đây</a></p>
+
+    <!-- sự khác biệt giữa class và id trong CSS -->
+    <!-- class: có thể trùng nhau, sử dụng nhiều phần tử giống nhau -->
+    <!-- id: không ai giống ai -->
+    <p>nếu bạn muốn kết hợp giữa inline và block bấm <a href="https://www.google.com">tại đây</a></p>
+
+    <h3>Học Thêm Về BEM</h3>
+    <img src="https://static.collectui.com/shots/2451336/daily-ui-challenge-011-large" alt="Học BEM">
+
+    <p>ex1:</p>
+    <p> Block1: flash-message</p>
+    <p>element: image, title, desc, button</p>
+    <p>modifier: primary, secondary</p>
+    <p>block 1 & 2</p>
+    <p>flash-message</p>
+    <p>flash-message__image, flash-message__title, flash-message__desc, flash-message__button</p>
+    <p>Block1--modifier</p>
+    <p>flash-message__image--primary, flash-message__title--primary, flash-message__desc--primary, flash-message__button--primary</p>
+    <p>block2-modifier</p>
+    <p>flash-message__image--secondary, flash-message__title--secondary, flash-message__desc--secondary, flash-message__button--secondary</p>
+    <h3 class="flash-message__title flash-message__button--primary">Primary</h3>
+    <h3 class="flash-message__button flash-message__button--secondary">secondary</h3>
+    <img src="image/BaiTapChuong1.png" alt="">
+    <ul>
+        <li><h4>1:Kể Tên 10 Thẻ inline và block và thẻ semantics HTML5 mà bạn biết</h4></li>
+        <p>inline: span, a, b, i, img, button, </p>
+        <p>block: Thẻ H1-6, p, div, ul, li, ol, </p>
+        <p>semantic: section, article, header, footer, nav, aside, </p>
+        
+        <li><h4>2: Làm 1 vd về BEM cho block có tên là 'boy'</h4></li>
+        <p>block: boy</p>
+        <p>element: boy__hair, boy__belly, boy__foot, boy__hand</p>
+        <p>modifier: left, right, long, short</p>
+        <p>Tạo thẻ liên kết BEM</p>
+        <h4 class="boy__hair boy__hair--long">đầu tóc của boy dài</h4>
+        <h4 class="boy__hair boy__hair--shoft">Đầu tóc của boy ngắn</h4>
+       
+        <li><h4>3:Làm 1 vd liên kết giữa thẻ block và inline</h4></li>
+        <p>Nếu bạn <b>muốn chuyển trang</b> qua <i>google</i> thì bấm <a href="https://google.com " target="_blank" rel="noopener noreferrer">tại đây</a></p>
+        
+        <li><h4>4:Áp dụng kiến thức về BEM đặt tên cho UI này:</h4></li>
+        <img src="image/Baitap4.png" alt="">
+        <p>block:dropdown</p>
+        
+        <div class="dropdown">
+            <div class="dropdown__selected">
+                <span class="dropdown__selected"></span>
+                <i class="fa fa-caret-down dropdown__caret"></i>
+            </div>
+            
+            <div class="dropdown__list">
+                <div class="dropdown__item">
+                    <span class="dropdown__title"></span> 
+                    <i class="fa fa-flus dropdown__icon"></i>
+                </div>
+            </div>
+        </div>  
+</ul>
+        h1.title+p.desc+div.demo>p.text
+        <h1 class="title"></h1>
+        <p class="desc"></p>
+        <div class="demo">
+            <p class="text"></p>
+        </div>
+        h1.title+p.desc+.demo>p.text1+p.text2^.div2
+        <h1 class="title p desc"></h1>
+        <div class="demo">
+            <p class="text1"></p>
+            <p class="text2"></p>
+        </div>
+        <div class="div2"></div>
+
+<div>
+    <h3>Học về CSS reset</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi reprehenderit cumque perferendis esse nulla odio atque ab iure voluptates, voluptatibus, repudiandae aperiam, reiciendis ullam exercitationem recusandae vel ut laudantium fuga.</p>
+</div>
+<div>
+    <div class="background">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, iusto provident fugiat molestias nesciunt corrupti eos magni saepe quo debitis sunt explicabo eum in voluptates dolor consequatur. </p>
+    </div>
+</div>
+<div class="background2"></div>
+<div class="Bai6Chuong2">
+    <h3>Các Đơn Vị Hay Dùng Trong CSS </h3>
+</div>
+    <div class="em">EM</div>
+    <div class="rem">REM</div>
+    <h3 class="border__square--color">Học Thêm Vể border</h3>
+    <div class="border"><h3>border</h3></div>
+
+    <div class="margin">
+        <h1>Học Thêm về margin</h1>
+    </div>
+
+    <!-- Học Thêm về padding -->
+    <h3>Học Thêm về padding</h3>
+    <h4>sử dụng padding không cho chữ dính lề (padding: 10px)</h4>
+    <div class="padding">
+        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum repudiandae enim, nesciunt</h1>
+    </div>
+
+    <div >
+        <h1>Học box-sizing</h1>
+        <div class="box-sizing">box-sizing</div>
+        
+    </div>
+    
+    <h3>cách sử dụng thuộc tính display</h3>
+    <a href="#">google.com</a>
+
+
+    <div class="font">
+        <h1>Tìm Hiểu thêm về Font</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod possimus saepe exercitationem non minima porro eligendi corrupti quaerat pariatur modi natus, tempore ullam sunt nihil vero? Odio in debitis sunt!</p>
+    </div>
+
+    <div class="lienqua">
+        <h3>các thuộc tính liên quan đến chữ</h3>
+        <p class="lienquan">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, ad? Dignissimos distinctio repellat maiores sit? Ut porro impedit alias laudantium amet velit voluptatum atque, ab officia sunt sed nemo repellat?</p>
+    </div>
+
+    <div class="bai15image">
+        <h3>Các thuộc tính liên quan đến image</h3>
+        <img class="image__bai15" src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="">
+    </div>
+
+    <div>
+        <h3>các pseudo mà bạn biết</h3>
+        <p>pseudo là khi bạn re chuột vào thì nó sẽ đổi màu</p>
+        <a href="#" class="pseudo">pseudo</a>
+    </div>
+    <div class="baitapchuong2">
+    <H1 class="baitapchuong2__title">bài Tập Chương 2</H1>
+        <img src="image/BaiTapChuong2.png" alt="">
+    <ul>
+        <li>1:<p>Tạo 1 khói có class là 'box' có độ rộng và chiều cao lần lược là '200x300' có màu nên là '#ffa400' và có chữ bất kì màu đen, border màu vàng, padding 10px, margin 15px, bo góc 4px, chữ canh giữa</p></li>
+        <div class="box">BOX</div>
+        
+        <li>2:<p>Tạo 1 khối có đoạn chữ rất dài và bất kì, độ rộng tối đa là 50rem hiển thị 3 hàng kết hợp dấu 3 chấm</p></li>
+        <div class="text3chuong2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat veniam facere alias libero odio distinctio laudantium, iusto veritatis fuga debitis aliquid excepturi sit nobis magnam, asperiores nam in soluta. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero assumenda, aspernatur dolores ut qui ab reiciendis tempora error sequi quidem aliquid minima at, alias doloremque maiores corrupti consequuntur nam amet.</div>
+        
+        <li>3:<p>Tạo 1 khối có đoạn chữ rất dài và bất kì, độ rộng tối đa là 10rem hiển thị 1 hàng kết hợp dấu 3 chấm</p></li>
+        <div class="chuong2"><p class="baitap3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quam quod doloribus itaque iste quos, ex sed culpa voluptatibus alias incidunt quas dolor et non! Blanditiis magnam inventore alias quae?</p></div>
+        
+        <li>4:<p>Tạo 1 khối có chiều rộng và chiều cao là 100vw và 100vh cho hình nền bất kì, yêu cầu phủ toàn khối, canh góc bên phải, không có lặp lại</p></li>
+        <img class="bai4" src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        
+        <li>5:<p>Tạo 1 khối có độ rông và chiều cao tương ứng là 400x400px và cho hình ảnh hiển thị bên trong yêu cầu khối này là hình tròn và hình ảnh nằm trọn bên trong không được méo và tràng ra ngoài</p></li>
+        <div class="chuong2bai5">
+           <div class="TaoKhoiHinhTron"><img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" class="TaoKhoiHinhTron__image"></div>
+        </div>
+        <li>6:<p class="Roboto">Chèn font từ Google vào bài tập và sử dụng Fonts 'Roboto' với các độ đậm là '400' và '600'</p></li>
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&       display=swap" rel="stylesheet"> -->
+      
+      <li>7:<p>Tạo ra các button như hình https://designerup.co/blogcontent/images/2019/01/button_corners.png sự dụng padding, margin, text-align, kiến thức đã học</p></li>
+      <img src="image/baitap7Chuong2.png" alt="">
+      <!-- <div class="button__container"> -->
+          <!-- <div class="button__title1"> -->
+            <!-- <span class="button__title--span1"> -->
+                <!-- <b>SQUARE CONRNERS</b> -->
+            <!-- </span> -->
+            <!-- <span class="button__title--span2"> -->
+                <!-- <b>ROUNDED CONRNERS</b> -->
+            <!-- </span> -->
+            <!-- <span class="button__title--span3"> -->
+                <!-- <b>ROUND CONRNERS</b> -->
+            <!-- </span> -->
+        <!-- </div> -->
+<!--  -->
+<!--  -->
+<!--  -->
+          <!-- <div class="button__image"> -->
+            <!-- <span class="button__image--button1"> -->
+                <!-- <button class="secondary">Button</button> -->
+            <!-- </span> -->
+            <!-- <span class="button__image--button1"> -->
+                <!-- <Button class="secondary">Button</button> -->
+            <!-- </span> -->
+            <!-- <span class="button__image--button1"> -->
+                <!-- <button class="secondary">Button</button> -->
+            <!-- </span> -->
+        <!-- </div> -->
+    <!-- </div> -->
+        <!-- <li>8:</li> -->
+        <!-- <li>9:Đỗi màu chữ khi rê chuột vào</li> -->
+<!--  -->
+    <!-- </ul> -->
+    <div class="button">
+        <a href="#" class="link">Button</a>
+        <a href="#" class="link link--rounded">Button</a>
+        <a href="#" class="link link--round">Button</a>
+    </div>
+    </div>
+
+    <h1 class="Chuong3">Chương 3</h1>
+    <h3>Gradient trong css</h3>
+    <h4>Bai1</h4>
+    <div class="gradient"></div>
+    <div class="gradient--title">DEMO GRADIENT</div>
+    <h3>xữ lý backgound overlay gradient</h3>
+    <h4>Bài 2</h4>
+    <div class="background-overlay-gradient"></div>
+    <h4>Bai4</h4>
+    <div class="opacity-visibility-display-none"></div>
+    <h4>Bài 5</h4>
+    <p>Tạo Bóng cho khối</p>
+    <div class="shadow"></div>
+    <p>Tạo bóng cho chữ</p>
+    <div class="shadow--title">shadow--title</div>
+    <h4>Bài 6:Tìm hiểu biến cơ bản</h4>
+    <p>Khai báo biến toàn cục hoặc có thể khai báo biến cục bộ</p>
+    <div class="bien">Khai báo biến</div>
+</body>
+</html>
