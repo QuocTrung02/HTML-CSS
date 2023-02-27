@@ -1,0 +1,409 @@
+:root {
+  --primary-color: red;
+  --secondary-color: blue;
+}
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+body {
+  /* truyền vào tên fonts */
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  /* font-style: italic; */
+}
+
+* {
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+/* Chương 3  */
+.Chuong3 {
+  text-align: center;
+}
+/* ------------------------------------------------------------------- */
+
+/* Học về Gradient */
+.gradient {
+  width: 20rem;
+  height: 20rem;
+  background-image: linear-gradient(to right bottom, red, blue);
+  /* background-image: linear-gradient(to right bottom ,red 30%,blue 50%); */
+  /* Hướng Từ trái sang phải: to right từ trên xuống dưới :to boottom
+    từ trái qua phải rồi chạy xuống dưới: to right bottom còn lại 
+    tương tự  */
+}
+/* ------------------------------------------------------------------- */
+
+.gradient--title {
+  font-size: 5rem;
+  font-weight: bold;
+  background-image: linear-gradient(to right top, red, blue);
+  display: inline-block;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  /* trong suốt */
+  color: transparent;
+  /* ra chữ như mong muốn */
+  -webkit-background-clip: text;
+  /* clip sau sẽ biết */
+  background-clip: text;
+}
+.background-overlay-gradient {
+  width: 100vw;
+  height: 100vh;
+  /* cái nào code trước thì nằm trên đoạn code sau  */
+  /* và muốn nhìn thấy hình sau background thì ta xài mã màu rgba() */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(216, 179, 59, 0.886),
+      rgba(41, 201, 140, 0.847)
+    ),
+    url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
+  /* phủ hết khung hình */
+  background-size: cover;
+}
+/* ------------------------------------------------------------------- */
+
+/* Bài 4 opacity-visibility-display-none  */
+.opacity-visibility-display-none {
+  width: 20rem;
+  height: 20rem;
+  background-image: linear-gradient(to right bottom, red, blue);
+  /* thuộc tính hiện con trỏ*/
+  cursor: pointer;
+  /* vẫn chiếm diện tích nhưng vẫn nhấn vô được */
+  opacity: 0;
+  /* vẫn chiếm diện tích nhưng không nhấn vào được */
+  visibility: hidden;
+  /* biến mất hoàn toàn không chiếm diện tích và nhấn vô đc  */
+  display: none;
+}
+/* ------------------------------------------------------------------- */
+
+/* Bài 5: shadow */
+.shadow {
+  width: 20rem;
+  height: 20rem;
+  background-color: black;
+  margin: 5rem auto;
+  /* Muốn tạo bóng nằm về phía bên trái + phải - thì xử lý x
+       Muốn tạo bóng nằm vế phía dưới + trên - thì xữ lý y
+       Muốn tạo độ mờ :blur
+       muốn tạo như border dừng :scale
+       Muốn tạo bóng màu gì vd:Blue     */
+  box-shadow: 0 0 0 0 red;
+}
+/* Tạo bóng cho chữ */
+.shadow--title {
+  margin-top: 5rem;
+  font-size: 5rem;
+  font-weight: bold;
+  /* độ bóng cho chữ thì không có scale */
+  text-shadow: 5px 5px 10px red;
+}
+/* ------------------------------------------------------------------- */
+
+/* Bài 6: sử dụng biến */
+/* Biến toàn cục */
+/* :root { */
+/* --primary-color: red; */
+/* --secondary-color:blue; */
+/* } */
+.bien {
+  /* khai báo biến cục bộ */
+  --primary-color: white;
+  font-size: 5rem;
+  margin-top: 5rem;
+  text-align: center;
+  background-image: linear-gradient(
+    to left top,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  /* trong suốt */
+  color: transparent;
+  /* ra chữ như mong muốn */
+  -webkit-background-clip: text;
+  /* clip sau sẽ biết */
+  background-clip: text;
+}
+/* ------------------------------------------------------------------- */
+
+/* Bài 7: Độ ưu tiên */
+
+#idUuTien {
+  color: black;
+}
+.UuTien {
+  text-align: center;
+  color: blue;
+}
+/* hạn chế sd !important: đè code */
+h1 {
+  /* color: aqua !important; */
+  color: red;
+}
+/* Tags < class < id < inline style < !important */
+/* ------------------------------------------------------------------- */
+
+/* Bài 8: thành thạo child selector trong css */
+ul {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+/* tô màu thằng đầu tiên */
+/* li:first-child { */
+/* color: red; */
+/* } */
+/* tô màu thằng cuối  */
+/* li:last-child { */
+/* color: orange; */
+/* } */
+/* muốn tô màu thằng nào thì điền vào số dòng */
+/* li:nth-child(3) { */
+/* color: yellow; */
+/* } */
+/* Muốn tô màu thằng kế cuối */
+/* li:nth-last-child(2) nó sẽ chạy từ dưới lên trên và lấy thằng số 2
+có nghĩa là thằng kế cuối */
+/* li:nth-last-child(2) { */
+/* color: aqua; */
+/* } */
+/* Chọn tất cả trừ cái đầu tiên */
+/* li:not(:first-child) { */
+/* color: green; */
+/* } */
+/* Chọn tất cả trừ cái cuối cùng */
+/* li:not(:last-child) { */
+/* color: brown; */
+/* } */
+/* Chọn theo chẵn lẽ 
+odd: số lẽ
+even: số chẵn*/
+/* li:nth-child(odd) { */
+/* color: black; */
+/* } */
+/* li:nth-child(even) { */
+/* color: yellowgreen; */
+/* } */
+/* Nó lấy theo thứ tự code
+   tags < class < id < inline style < !important */
+/* ------------------------------------------------------------------- */
+/* Bài 9: thành thạo type selector trong css */
+/* child selector với type selector khá giống nhau  */
+/* type-selector là lấy theo kiểu dữ liệu */
+/* VD:  tô màu thằng đầu tiên li:first-of-type {color: orange} */
+li:first-of-type {
+  color: orange;
+}
+/* Muốn trỏ tới span trong li */
+li:last-child span {
+  color: red;
+}
+/* ------------------------------------------------------------------- */
+
+/* Bài 10:thành thạo combinators trong css */
+/* + có nghĩa là liền kề 2 thằng đứng liền kế mới sd đc
+  ~ những thằng đứng cùng cấp với nhau 
+*/
+h3 + .title1 {
+  color: green;
+}
+h3 ~ .title2 {
+  color: red;
+}
+/* ------------------------------------------------------------------- */
+
+/* Bài 11: tìm hiểu thêm css selector nâng cao */
+
+/* thay đỗi màu kí tự đầu có https  */
+a[href^="https"] {
+  color: aqua;
+}
+/* thay đỗi màu kí tự cuối có .vn  */
+a[href$=".vn"] {
+  color: yellowgreen;
+}
+/* thay đỗi màu có chứa kí tự www */
+a[href*="www"] {
+  color: violet;
+}
+/* chọn chính xác  */
+div[data-title="value"] {
+  color: red;
+}
+/* cách cho màu chữ cái đầu tiên và thay đỗi kích thước thẻ p */
+p::first-letter {
+  color: red;
+  font-size: 4rem;
+  font-weight: 800;
+}
+/* cách cho màu dòng đầu tiên và thay đỗi kích thước */
+p::first-line {
+  color: violet;
+}
+/* ------------------------------------------------------------------- */
+
+/* Bài 12: Nắm cơ bản transition trong css  */
+.boxed2 {
+  width: 20rem;
+  height: 20rem;
+  background-color: red;
+  /* đỗi màu chậm đều */
+  transition: background-color 2s linear;
+  /* 1s sau mới bắt đầu đỗi màu chậm đều */
+  transition-delay: 1s;
+  /* đỗi màu nhanh đều */
+  transition: background-color 1s ease;
+}
+/* đỗi màu khi rê chuột vào background */
+.boxed2:hover {
+  background-color: aqua;
+  color: red;
+}
+/* ------------------------------------------------------------------- */
+
+/* Bài Tập Chương 3 */
+.imagechuong3 {
+  margin-top: 5rem;
+  width: 100vw;
+  height: 50vh;
+  /* object-fit: cover; */
+}
+
+/* ------------------------------- */
+/* bài 1 */
+.button {
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: inline-block;
+  margin: 4rem;
+  /* Chữ viết in hoa */
+  text-transform: uppercase;
+  margin-left: 25rem;
+  color: white;
+  border-radius: 5px;
+  padding: 1.5rem 5rem;
+ text-align: center;
+ color: rgb(245, 244, 220);
+ margin-right: 7rem;
+ /* Muốn tạo bóng nằm về phía bên trái + phải - thì xử lý x
+ Muốn tạo bóng nằm vế phía dưới + trên - thì xữ lý y
+ Muốn tạo độ mờ :blur
+ muốn tạo như border dừng :scale
+ Muốn tạo bóng màu gì vd:Blue     */
+ /* độ bóng cho chữ thì không có scale */
+}
+.button--green {
+  box-shadow: -5px 4px 9px 4px rgba(131, 218, 188, 0.993) ;
+  background-image: linear-gradient(to right, rgba(92, 228, 167, 0.974), rgba(71, 197, 193, 0.973));
+
+}
+.button--blue {
+  padding: 1.5rem 4rem;
+  background-image: linear-gradient(to right, rgba(196, 226, 249, 0.63), rgba(119, 183, 235, 0.932));
+  box-shadow: -5px 4px 9px 4px rgba(91, 143, 247, 0.993) ;
+
+}
+.button--violet {
+  margin-left: 23rem;
+  background-image: linear-gradient(to right, rgba(180, 188, 253, 0.897), #A383F1);
+  box-shadow: -5px 4px 9px 4px rgba(53, 99, 237, 0.993) ;
+
+}
+.button--orange {
+  background-image: linear-gradient(to right, #ECBB7D, #EA9154);
+  box-shadow: -5px 4px 9px 4px rgba(235, 185, 45, 0.993) ;
+
+}
+.button--red {
+  box-shadow: -5px 4px 9px 4px rgba(239, 110, 45, 0.993) ;
+  background-image: linear-gradient(to right, #EA9E8F, #D96663);
+}
+.button--pink {
+  background-image: linear-gradient(to right, #EC8C9D, #E2708A);
+  box-shadow: -3px 1px 18px 4px rgb(250 133 199 / 99%) ;
+
+}
+/* ------------------------------- */
+/* Bài 2: */
+.gradient-text {
+  font-size: 20rem;
+  font-weight: 900;
+  background-image: linear-gradient(to right bottom, #F9FBFB, red);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+}
+/* ------------------------------- */
+/* Bài 3-4 */
+li {
+  display: inline-block;
+  width: 20rem;
+  height: 25rem;
+  transition: background-color 2s linear ;
+}
+li:first-child {
+  background-color: #A383F1;
+}
+li:first-child:hover {
+  background-color: #e84913;
+}
+li:nth-child(2) {
+  background-color: #D96663;
+
+}
+li:nth-child(2):hover {
+background-color: aqua;
+}
+li:nth-child(3) {
+  background-color: #ECBB7D;
+}
+li:nth-child(3):hover {
+  background-color: #A383F1;
+}
+
+li:nth-last-child(2){
+  background-color: aqua;
+}
+li:nth-last-child(2):hover {
+  background-color: red;
+}
+
+li:last-child {
+  background-color: blue;
+}
+li:last-child:hover {
+  background-color: red;
+}
+/* ------------------------------- */
+/* Bài 5 */
+/* đỗi màu kí tự đầu */
+div[data-link^="https"] {
+  color: aqua;
+}
+/* đỗi màu kí tự cuối */
+div[data-link$=".vn"] {
+  color: #A383F1;
+}
+/* đỗi màu có chứa  */
+div[data-name="hello"] {
+  color: blue;
+}
+div[data-name="agaihello"] {
+  color: red;
+}
+input[type="email"] {}
+input[name="fullname"] {}
+
+
