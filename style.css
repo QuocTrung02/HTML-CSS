@@ -1,0 +1,372 @@
+/*
+    các thuộc tính về Background 
+
+*/
+/* 
+ --Cấu trúc của 1 đoạn code CSS
+    selector {
+        property: value;
+    }
+    selecttors:
+    tags: p, div, h1, main, a, span
+    class: .demo, .header, .boy
+
+    ID: #container, #footer
+
+    property:color ,background-color
+    value: red, orange, yellow
+ */
+ :root {
+  --primary-color: red;
+  --secondary-color:blue;
+ }
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+* {
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.background {
+  background-color: black;
+  color: white;
+  width: 100vw;
+}
+
+/* Ex1 Code Bình Thường*/
+.background2 {
+  /* background-image: url("https://images.unsplash.com/photo-1562737794-88835094442e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Zmxhc2h8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60"); */
+  width: 50vw;
+  height: 50vh;
+  /* căn giữa */
+  /* background-position: center center; */
+  /* phủ hết Khung hình */
+  /* background-size: cover; */
+  /* cách không cho hình lặp đi lặp lại */
+  /* background-repeat: no-repeat; */
+  /* cách cho hình đứng yên Cố Định */
+  /* background-attachment: fixed; */
+
+  /* Ex2 : Code rút gọn */
+  background: red
+    url("https://images.unsplash.com/photo-1562737794-88835094442e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Zmxhc2h8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60")
+    no-repeat center center / cover fixed;
+  /* / cover nen dat sau center center */
+}
+html {
+  font-size: 62.5%;
+}
+/* font-size: 100% = 16px */
+/* 1em = 1rem = 16px */
+.em {
+  width: 10em;
+  height: 10em;
+  background-color: yellow;
+  font-size: 32px;
+  /*1EM lúc này = 32px*/
+}
+/* Đơn vị EM sẽ phụ thuộc vào thuộc tính font-size của chính nó hoặc phần tử của chứa nó */
+
+.rem {
+  font-size: 32px;
+  width: 10rem;
+  height: 10rem;
+  background-color: tomato;
+}
+/* Đơn vị EM sẽ phụ thuộc vào thuộc tính font-size của thẻ html*/
+/* Cách tính đơn vị 
+    100% = 16px
+    ?% = 10px
+    ? = 62.5%
+*/
+
+/* Học Thêm về border */
+
+.border {
+  background-color: green;
+  width: 20rem;
+  height: 20rem;
+  /* background-size: 32px */
+  color: black;
+  /* tạo viền cho EM */
+  /* border: 5px solid black; */
+  /* border-width: 5px;
+  border-style: solid;
+  border-color: black; */
+  /* hoặc tạo viền  */
+  border-top: 5px solid blue;
+  border-bottom: 5px solid red;
+  border-right: 5px solid aqua;
+  border-left: 5px solid black;
+  /* tạo viền cong cho EM */
+  border-radius: 5%;
+  /* tạo viền cong cho từng góc */
+  /* border-radius: 5px 10px 20px 30px; */
+  /* bo tròn các góc thành hình tròn */
+  /* border-radius: 50%; */
+  /* bo tròn góc cạnh nào mà bạn muốn VD */
+  /* border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%; */
+  /* tạo hình vuông Xung QUanh Con của nó */
+  /* outline: 5px solid red; */
+}
+
+/* Học Thêm về margin */
+.margin {
+  width: 30rem;
+  height: 30rem;
+  background-color: aqua;
+  /* THứ tự margin của Hình Là top right bottom left */
+  /* margin: 10px 15px 20px 25px;  */
+  /*--nếu có 1 giá trị top = right = bottom = left = 20px */
+  /* margin: 20px; */
+  /* --nếu có 2 giá trị top  = bottom = 20px  left = right = 40px */
+  /* margin: 20px 40px; */
+  /* --nếu có 3 giá trị top  = 10  bottom = 20px  left = right = 30px */
+  /* margin: 10px 20px 30px; */
+  /* --margin-right:auto cho hình chạy qua bên phải*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.padding {
+  width: 20rem;
+  height: 20rem;
+  background-color: blue;
+  /* cách khắc phục chữ tràn ra ngoài */
+  overflow: hidden;
+  margin: 20px auto;
+  /* sử dụng padding cho chữ không dính sát lề */
+  padding: 10px;
+  /* THứ tự margin của Hình Là top right bottom left */
+  /* margin: 10px 15px 20px 25px;  */
+  /*--nếu có 1 giá trị top = right = bottom = left = 20px */
+  /* margin: 20px; */
+  /* --nếu có 2 giá trị top  = bottom = 20px  left = right = 40px */
+  /* margin: 20px 40px; */
+  /* --nếu có 3 giá trị top  = 10  bottom = 20px  left = right = 30px */
+  /* margin: 10px 20px 30px; */
+}
+
+/* Học box-sizing */
+.box-sizing {
+  border: 5px solid black;
+  width: 10rem;
+  height: 10rem;
+  background-color: bisque;
+  padding: 1rem;
+  margin: 1rem;
+  /* box-sizing: border-box; */
+}
+
+/* Thuộc tính display */
+
+.a {
+  color: white;
+  text-decoration: none;
+  width: 10rem;
+  height: 10rem;
+  background-color: black;
+  display: inline-block;
+}
+
+/* tìm hiểu thêm về fonts */
+body {
+  /* truyền vào tên fonts */
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  /* font-style: italic; */
+}
+
+/* các thuộc tính liên quan đến chữ */
+.lienquan {
+  /* khoảng cách bạn cho phép chữ tới */
+  max-width: 50rem;
+  /* Khoảng cách giữa 2 dòng */
+  line-height: 1.5;
+  /* muốn chữ nằm ở bên right center */
+  /* text-align: right; */
+  /* text-align: center; */
+  /* canh đều 2 bên */
+  text-align: justify;
+  /* khoảng cách giữa các chữ */
+  letter-spacing: 5px;
+  /* khoảng cách giữa các từ */
+  word-spacing: 5px;
+  /* cách cho chữ không xuống hàng */
+  white-space: nowrap;
+  /* nếu tràng ra ngoài thì sẽ ẩn đi  */
+  overflow: hidden;
+  /* hiển thị dấu ... trên 1 hàng */
+  text-overflow: ellipsis;
+  /* hiển thị dấm 3 chấm ở hàng thứ 3 */
+}
+
+/*
+    Học thêm về các thuộc tính image
+    này được viết ở đầu css
+ img {
+    display: block;
+    cách không để hình bị stron ngang
+    max-width: 100%;
+}
+ */
+.image__bai15 {
+  width: 20rem;
+  height: 20rem;
+  /* cách fix hình thu nhỏ bị méo */
+  object-fit: cover;
+  /* nếu bạn muốn thấy nghiêng về đâu thì xài: */
+  /* còn không mặc định nó là center */
+  object-position: bottom;
+  object-position: top;
+  object-position: right;
+  object-position: left;
+  /* muốn hình ra giữa*/
+  /* mặc định thẻ img là thẻ inline 
+    nên ta phải chuyển về thẻ block */
+  margin: 0 auto;
+  /* cách bo tròn hình  */
+  border-radius: 50%;
+}
+
+/* Học thêm về pseudo */
+.pseudo {
+  color: black;
+  font-size: 5rem;
+}
+/* rê chuột vào thì chữ sẽ đỗi màu */
+.pseudo:hover {
+  color: orange;
+}
+/* nhấn vào chữ sẽ đỗi màu */
+/* .pseudo:active { */
+/* color: orange; */
+/* } */
+/* khi bạn đã nhấn vào rồi thì nó sẽ lưu màu */
+/* .pseudo:visited { */
+/* color: orange; */
+/* } */
+
+/* Bài tập chương 2 */
+.baitapchuong2__title {
+  text-align: center;
+}
+/* Bài 1: */
+.box {
+  width: 20rem;
+  height: 20rem;
+  background-color: #ffa400;
+  color: black;
+  border: red solid 1rem;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+
+/* Bài 2: */
+.text3chuong2 {
+  display: -webkit-box;
+  /* tạo ra 3 dòng */
+  -webkit-line-clamp: 3;
+  /* theo chiều dọc */
+  -webkit-box-orient: vertical;
+  /* chống tràn  */
+  overflow: hidden;
+  /* tạo dấu 3 chấm sau 3 dòng */
+  text-overflow: ellipsis;
+  /* độ rộng tối đa */
+  max-width: 50rem;
+}
+
+/* Bài 3: */
+.baitap3 {
+  max-width: 10rem;
+  /* cách cho chữ không xuống hàng */
+  white-space: nowrap;
+  /* nếu tràng ra ngoài thì sẽ ẩn đi  */
+  overflow: hidden;
+  /* hiển thị dấu ... trên 1 hàng */
+  text-overflow: ellipsis;
+  /* display: block; */
+}
+
+/* Bài 4: */
+.bai4 {
+  /* căn giữa */
+  /* background-position: center center; */
+  /* phủ hết Khung hình */
+  /* background-size: cover; */
+  /* cách không cho hình lặp đi lặp lại */
+  /* background-repeat: no-repeat; */
+  /* cách cho hình đứng yên Cố Định */
+  /* background-attachment: fixed; */
+  width: 100vw;
+  height: 100vh;
+  /* căn giữa */
+  /* background-position: center center; */
+  /* phủ hết Khung hình */
+  background-size: cover;
+  /* cách không cho hình lặp đi lặp lại */
+  background-repeat: no-repeat;
+  /* cách cho hình đứng yên Cố Định */
+  background-attachment: fixed;
+  /* cách fix hình thu nhỏ bị méo */
+  object-fit: cover;
+}
+
+/* Bài 5: */
+.TaoKhoiHinhTron {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  border: 5px solid;
+}
+.TaoKhoiHinhTron__image {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  /* Hình Không Bị Méo */
+  object-fit: cover;
+  /* Phủ Hết khung hình */
+  /* background-size: cover; */
+  /* Căn giữa */
+  /* background-position: center center; */
+  margin: 40px 1px 40px 46px;
+}
+
+/* Bài 6: */
+.Roboto {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+/* Bài 7-8-9 */
+.link {
+  margin-top: 3rem;
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 5rem;
+  /* width: 5rem;height: 5rem; */
+  text-align: center;
+  color: white;
+  background-color: violet;
+  margin-left: 5rem;
+}
+.link--rounded {
+  border-radius: 0.5rem;
+}
+.link--round {
+  border-radius: 2rem;
+}
+
